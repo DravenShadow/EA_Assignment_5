@@ -1,7 +1,17 @@
+"""
+            BST_Test.py                             Author: Rowland DePree
+
+
+            Runs the BST program.
+"""
 from BST import BinSearchTree
 
 
 def main():
+    """
+    Main method
+    :return:
+    """
     bt = BinSearchTree()
     data = [15, 6, 18, 3, 7, 17, 20, 2, 4, 13, 9]
     for val in data:
@@ -22,5 +32,8 @@ def main():
     bt.tree_search(bt.root, 9)
 
 
+"""
+    Runs the main method
+"""
 if __name__ == '__main__':
     main()
