@@ -48,11 +48,19 @@ class BinSearchTree:
             num_lvl = []
             next_lvl = []
             for element in lvl_to_go:
-                num_lvl.append(element.key)
-                if element.left_child is not None:
-                    next_lvl.append(element.left_child)
-                if element.right_child is not None:
-                    next_lvl.append(element.right_child)
+                if element is '#':
+                    num_lvl.append(element)
+                else:
+                    num_lvl.append(element.key)
+                if element is not '#':
+                    if element.left_child is not None:
+                        next_lvl.append(element.left_child)
+                    else:
+                        next_lvl.append('#')
+                    if element.right_child is not None:
+                        next_lvl.append(element.right_child)
+                    else:
+                        next_lvl.append('#')
             print(num_lvl)
             lvl_to_go = next_lvl
 

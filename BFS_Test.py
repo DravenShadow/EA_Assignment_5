@@ -1,4 +1,3 @@
-from BST import TreeNode
 from BST import BinSearchTree
 
 def main():
